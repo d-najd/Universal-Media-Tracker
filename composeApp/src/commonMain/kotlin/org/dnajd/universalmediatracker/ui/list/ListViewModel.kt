@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import org.dnajd.universalmediatracker.domain.MuseumObject
-import org.dnajd.universalmediatracker.data.MuseumRepository
+import org.dnajd.universalmediatracker.data.museum.MuseumRepository
 
 class ListViewModel(museumRepository: MuseumRepository) : ViewModel() {
     val objects: StateFlow<List<MuseumObject>> =

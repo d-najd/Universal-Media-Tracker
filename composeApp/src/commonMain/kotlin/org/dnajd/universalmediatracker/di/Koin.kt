@@ -7,11 +7,11 @@ import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.http.ContentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
-import org.dnajd.universalmediatracker.data.InMemoryMuseumStorage
-import org.dnajd.universalmediatracker.data.KtorMuseumApi
-import org.dnajd.universalmediatracker.data.MuseumApi
-import org.dnajd.universalmediatracker.data.MuseumRepository
-import org.dnajd.universalmediatracker.data.MuseumStorage
+import org.dnajd.universalmediatracker.data.museum.InMemoryMuseumStorage
+import org.dnajd.universalmediatracker.data.museum.KtorMuseumApi
+import org.dnajd.universalmediatracker.data.museum.MuseumApi
+import org.dnajd.universalmediatracker.data.museum.MuseumRepository
+import org.dnajd.universalmediatracker.data.museum.MuseumStorage
 import org.koin.core.context.startKoin
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module

@@ -1,4 +1,4 @@
-package org.dnajd.universalmediatracker.data
+package org.dnajd.universalmediatracker.data.museum
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

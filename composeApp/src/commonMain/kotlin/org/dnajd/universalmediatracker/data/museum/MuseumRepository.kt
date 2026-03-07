@@ -1,4 +1,4 @@
-package org.dnajd.universalmediatracker.data
+package org.dnajd.universalmediatracker.data.museum
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
