@@ -11,8 +11,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import org.dnajd.universalmediatracker.screens.detail.DetailScreen
-import org.dnajd.universalmediatracker.screens.list.ListScreen
+import org.dnajd.universalmediatracker.ui.detail.DetailScreen
+import org.dnajd.universalmediatracker.ui.list.ListScreen
 import kotlinx.serialization.Serializable
 
 @Serializable

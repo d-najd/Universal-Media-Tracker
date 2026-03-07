@@ -1,4 +1,4 @@
-package org.dnajd.universalmediatracker.screens.detail
+package org.dnajd.universalmediatracker.ui.detail
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.background
@@ -21,8 +21,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
-import org.dnajd.universalmediatracker.data.MuseumObject
-import org.dnajd.universalmediatracker.screens.EmptyScreenContent
+import org.dnajd.universalmediatracker.domain.MuseumObject
+import org.dnajd.universalmediatracker.ui.EmptyScreenContent
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import universalmediatracker.composeapp.generated.resources.Res

@@ -1,4 +1,4 @@
-package org.dnajd.universalmediatracker.data
+package org.dnajd.universalmediatracker.domain
 
 import kotlinx.serialization.Serializable
 

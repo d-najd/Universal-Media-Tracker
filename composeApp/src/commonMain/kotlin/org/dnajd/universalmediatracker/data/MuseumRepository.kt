@@ -4,6 +4,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
+import org.dnajd.universalmediatracker.domain.MuseumObject
 
 class MuseumRepository(
     private val museumApi: MuseumApi,

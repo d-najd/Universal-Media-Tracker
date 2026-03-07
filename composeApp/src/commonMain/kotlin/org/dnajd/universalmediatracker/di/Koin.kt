@@ -1,7 +1,7 @@
 package org.dnajd.universalmediatracker.di
 
-import org.dnajd.universalmediatracker.screens.detail.DetailViewModel
-import org.dnajd.universalmediatracker.screens.list.ListViewModel
+import org.dnajd.universalmediatracker.ui.detail.DetailViewModel
+import org.dnajd.universalmediatracker.ui.list.ListViewModel
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.http.ContentType

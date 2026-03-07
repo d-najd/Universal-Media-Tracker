@@ -1,4 +1,4 @@
-package org.dnajd.universalmediatracker.screens
+package org.dnajd.universalmediatracker.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.Text

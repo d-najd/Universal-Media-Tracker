@@ -1,8 +1,8 @@
-package org.dnajd.universalmediatracker.screens.detail
+package org.dnajd.universalmediatracker.ui.detail
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.Flow
-import org.dnajd.universalmediatracker.data.MuseumObject
+import org.dnajd.universalmediatracker.domain.MuseumObject
 import org.dnajd.universalmediatracker.data.MuseumRepository
 
 class DetailViewModel(private val museumRepository: MuseumRepository) : ViewModel() {

@@ -3,6 +3,7 @@ package org.dnajd.universalmediatracker.data
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.map
+import org.dnajd.universalmediatracker.domain.MuseumObject
 
 interface MuseumStorage {
     suspend fun saveObjects(newObjects: List<MuseumObject>)
