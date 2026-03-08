@@ -2,37 +2,19 @@ package org.dnajd.universalmediatracker.util
 
 import com.dokar.quickjs.QuickJs
 import kotlinx.coroutines.Dispatchers
-import kotlinx.serialization.ExperimentalSerializationApi
-import kotlinx.serialization.Serializable
 
-
-/*
-interface JavascriptParser {
-    fun parse(code: String);
-}
- */
-
-expect class JavascriptParser: AutoCloseable {
-    constructor()
-    fun compile(code: String, filename: String = "main.js", asModule: Boolean = false)
-    suspend inline fun <reified T> evaluate(code: String, filename: String = "main.js", asModule: Boolean = false): T
-    override fun close()
-}
-
-/*
-@OptIn(ExperimentalSerializationApi::class)
-class AppJavascriptParser: AutoCloseable {
+actual class JavascriptParser : AutoCloseable {
     var context: QuickJs = QuickJs.create(Dispatchers.Main)
 
     init {
         // context.addTypeConverters(SerializableConverter<Teme>())
     }
 
-    fun compile(code: String, filename: String = "main.js", asModule: Boolean = false) {
+    actual fun compile(code: String, filename: String, asModule: Boolean) {
         context.compile(code, filename, asModule)
     }
 
-    suspend inline fun <reified T> evaluate(code: String, filename: String = "main.js", asModule: Boolean = false): T {
+    actual suspend inline fun <reified T> evaluate(code: String, filename: String, asModule: Boolean): T {
         // val result = context.evaluate<T>(code.trimIndent(), filename, asModule)
         // return result
 
@@ -71,14 +53,7 @@ class AppJavascriptParser: AutoCloseable {
          */
     }
 
-    override fun close() {
+    actual override fun close() {
         context.close()
     }
 }
- */
-
-
-@Serializable
-data class Teme(
-    val first: Int,
-)

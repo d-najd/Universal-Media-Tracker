@@ -27,7 +27,6 @@ androidx-ui-tooling = "1.7.8"
 quickjs = "1.0.3"
 
 [libraries]
-koin-core-v356 = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -63,7 +62,7 @@ material-icons-core = { module = "org.jetbrains.compose.material:material-icons-
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-ui-tooling" }
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "androidx-ui-tooling" }
-quickjs-kt = { module = "io.github.dokar3:quickjs-kt", version = "quickjs" }
+quickjs-kt = { module = "io.github.dokar3:quickjs-kt", version = "1.0.3" }
 # quickjs-kt-converter = { module = "io.github.dokar3:quickjs-kt-converter-ktxserialization", version.ref = "quickjs" }
 
 [plugins]

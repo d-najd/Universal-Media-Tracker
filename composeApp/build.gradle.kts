@@ -40,16 +40,18 @@ kotlin {
         browser()
         binaries.executable()
     }
-    
+
+    applyDefaultHierarchyTemplate()
+
     sourceSets {
         iosMain.dependencies {
-            // implementation(libs.quickjs.kt)
+            implementation(libs.quickjs.kt)
         }
         androidMain.dependencies {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
-            // implementation(libs.quickjs.kt)
+            implementation(libs.quickjs.kt)
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)
@@ -77,7 +79,7 @@ kotlin {
 
             implementation(libs.kotlinx.coroutines.core)
 
-            implementation(libs.quickjs.kt)
+            // implementation(libs.quickjs.kt)
             // implementation(libs.quickjs.kt.converter)
             // implementation(libs.kotlinx.serialization.json)
             // implementation("io.github.dokar3:quickjs-kt-converter-ktxserialization:1.1.1")
@@ -89,7 +91,21 @@ kotlin {
             implementation(libs.ktor.client.cio)
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
-            // implementation(libs.quickjs.kt)
+            implementation(libs.quickjs.kt)
+        }
+
+        val jvmAndNativeMain by creating {
+            dependsOn(commonMain.get())
+        }
+
+        androidMain.get().dependsOn(jvmAndNativeMain)
+        iosMain.get().dependsOn(jvmAndNativeMain)
+        jvmMain.get().dependsOn(jvmAndNativeMain)
+        iosArm64Main.get().dependsOn(jvmAndNativeMain)
+        iosSimulatorArm64Main.get().dependsOn(jvmAndNativeMain)
+
+        jvmAndNativeMain.dependencies {
+            implementation(libs.quickjs.kt)
         }
     }
 }

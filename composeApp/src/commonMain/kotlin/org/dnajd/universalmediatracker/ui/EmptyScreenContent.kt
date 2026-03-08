@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import org.dnajd.universalmediatracker.util.AppJavascriptParser
+import org.dnajd.universalmediatracker.util.JavascriptParser
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.stringResource
 import universalmediatracker.composeapp.generated.resources.Res
@@ -21,7 +21,7 @@ fun EmptyScreenContent(
 ) {
     CoroutineScope(Dispatchers.Main).launch {
         println("TEST HELLOOOO")
-        val parser = AppJavascriptParser()
+        val parser = JavascriptParser()
 
         parser.evaluate<Unit>(
             """
