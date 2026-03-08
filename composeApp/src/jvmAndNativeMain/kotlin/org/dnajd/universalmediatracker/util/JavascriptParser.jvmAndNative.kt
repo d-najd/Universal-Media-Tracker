@@ -5,8 +5,10 @@ import com.dokar.quickjs.binding.JsObject
 import com.dokar.quickjs.conveter.SerializableConverter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.serialization.ExperimentalSerializationApi
+import org.dnajd.universalmediatracker.domain.plugin.PluginSettings
 import kotlin.reflect.KClass
 
+@OptIn(ExperimentalSerializationApi::class)
 actual class JavascriptParser : AutoCloseable {
     val context: QuickJs = QuickJs.create(Dispatchers.Main)
     val registeredConverters = mutableSetOf<KClass<*>>()
@@ -24,11 +26,7 @@ actual class JavascriptParser : AutoCloseable {
     }
 
     init {
-        // Already supported by default
-        registeredConverters.add(Int::class)
-        registeredConverters.add(Long::class)
-        registeredConverters.add(String::class)
-        registeredConverters.add(Long::class)
+        context.addTypeConverters(SerializableConverter<PluginSettings>())
     }
 
     actual fun compile(code: String, filename: String, asModule: Boolean) {

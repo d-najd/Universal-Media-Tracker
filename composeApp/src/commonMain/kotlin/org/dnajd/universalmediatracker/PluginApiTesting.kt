@@ -1,3 +1,7 @@
+package org.dnajd.universalmediatracker
+
+object PluginApiTesting {
+    const val code = """
 class addonBuilder {
     constructor(settings) {
         this.settings = settings
@@ -41,14 +45,22 @@ class addonBuilder {
 
 let builder = new addonBuilder({
     id: "com.test",
-    version: "1.1.1",
+    version: "1.1.1A",
     name: "Hello",
 })
 
+/*
 builder.defineCatalogHandler(function (args) {
     return 1
 })
+*/
 
 function build() {
     return builder
+}
+
+function testInt() {
+    return 1
+}
+    """
 }

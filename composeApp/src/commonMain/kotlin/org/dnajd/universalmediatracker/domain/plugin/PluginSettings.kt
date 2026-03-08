@@ -11,7 +11,5 @@ class PluginSettings(
      * TODO add check
      */
     val version: String,
-    val description: String?,
-) {
-
-}
+    // val description: String? = null,
+)

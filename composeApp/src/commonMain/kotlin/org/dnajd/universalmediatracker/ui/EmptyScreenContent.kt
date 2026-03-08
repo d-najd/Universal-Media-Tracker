@@ -8,6 +8,8 @@ import androidx.compose.ui.Modifier
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import org.dnajd.universalmediatracker.data.plugin.JavascriptPluginApi
+import org.dnajd.universalmediatracker.data.plugin.PluginApi
 import org.dnajd.universalmediatracker.util.JavascriptParser
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.stringResource
@@ -19,19 +21,7 @@ import universalmediatracker.composeapp.generated.resources.no_data_available
 fun EmptyScreenContent(
     modifier: Modifier = Modifier,
 ) {
-    CoroutineScope(Dispatchers.Main).launch {
-        println("TEST HELLOOOO")
-        val parser = JavascriptParser()
-
-        parser.evaluate<Unit>(
-            """
-            function getResult() {
-                return { first: 1 }
-            }
-            """
-        )
-    }
-
+    val test = JavascriptPluginApi().parseConfig()
 
     Box(
         modifier = modifier,
