@@ -42,10 +42,14 @@ kotlin {
     }
     
     sourceSets {
+        iosMain.dependencies {
+            // implementation(libs.quickjs.kt)
+        }
         androidMain.dependencies {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
+            // implementation(libs.quickjs.kt)
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)
@@ -69,8 +73,14 @@ kotlin {
             implementation(libs.material.icons.core)
             implementation(libs.navigation.compose)
 
-
             implementation(projects.shared)
+
+            implementation(libs.kotlinx.coroutines.core)
+
+            implementation(libs.quickjs.kt)
+            // implementation(libs.quickjs.kt.converter)
+            // implementation(libs.kotlinx.serialization.json)
+            // implementation("io.github.dokar3:quickjs-kt-converter-ktxserialization:1.1.1")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -79,6 +89,7 @@ kotlin {
             implementation(libs.ktor.client.cio)
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+            // implementation(libs.quickjs.kt)
         }
     }
 }
