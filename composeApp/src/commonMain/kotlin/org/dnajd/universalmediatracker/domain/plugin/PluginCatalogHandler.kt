@@ -5,9 +5,10 @@ import org.dnajd.universalmediatracker.domain.MetaPreviewObject
 
 @Serializable
 class PluginCatalogHandler(
-    val settings: PluginCatalogSettings = PluginCatalogSettings(),
+    val settings: PluginCatalogSettings? = PluginCatalogSettings(),
 ) {
     fun request(extras: PluginCatalogRequest): List<MetaPreviewObject> {
+
         TODO()
     }
 }
