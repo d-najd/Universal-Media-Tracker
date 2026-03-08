@@ -106,6 +106,7 @@ kotlin {
 
         jvmAndNativeMain.dependencies {
             implementation(libs.quickjs.kt)
+            implementation(libs.quickjs.kt.converter)
         }
     }
 }

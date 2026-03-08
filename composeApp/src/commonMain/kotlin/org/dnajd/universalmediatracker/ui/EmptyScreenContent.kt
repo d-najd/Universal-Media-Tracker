@@ -26,25 +26,10 @@ fun EmptyScreenContent(
         parser.evaluate<Unit>(
             """
             function getResult() {
-                return 1
+                return { first: 1 }
             }
             """
         )
-
-        /*
-        val test = parser.evaluate<Int>(
-            """
-            function getResult() {
-                return 1
-            }
-        """)
-         */
-
-
-        println("HELLOOO")
-        val result = parser.evaluate<Int>("getResult()")
-        println("Result $result")
-        println("HELLOOO")
     }
 
 
