@@ -25,7 +25,6 @@ class JavascriptPluginApi: PluginApi, AutoCloseable {
         CoroutineScope(Dispatchers.Main).launch {
             val first = parser.evaluate<Long>("testInt()")
 
-            val result = parser.evaluate<Any>("build()")
             val result2 = parser.evaluate<Plugin>("build()")
             val final = ""
         }

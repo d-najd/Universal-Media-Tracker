@@ -5,5 +5,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 class Plugin(
     val settings: PluginSettings,
-    // val catalogHandler: PluginCatalogHandler?,
+    val catalogHandler: PluginCatalogHandler? = null,
 )
